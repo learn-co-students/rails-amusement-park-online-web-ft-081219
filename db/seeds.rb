@@ -35,7 +35,7 @@ DATA = {
     ["Teacups Ride", 3, 1, 1, 28]
   ],
   :admins => [
-    "Mary Elitch Long",
+    "Mary Elitch Long", 
     "John Elitch"
   ]
 }

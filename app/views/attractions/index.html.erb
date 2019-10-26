@@ -1,0 +1,11 @@
+
+    <%= diplay_link_for_admin @user%>
+<% @attractions.each do |attraction| %>
+    <%=attraction.name%>
+    <% if !@user.admin%>
+        <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+    <%else%>
+        <%= link_to "Show #{attraction.name}", attraction_path(attraction) %>
+    <%end%>
+     
+<% end %>
