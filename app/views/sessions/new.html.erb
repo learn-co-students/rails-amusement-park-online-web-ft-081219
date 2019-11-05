@@ -1,0 +1,11 @@
+<h1>Sign In:</h1>
+
+<%= form_for :user do |f| %>
+    <%= f.label :name, "Your name:" %><br>
+    <%= f.select :name, User.all.collect {|u|[u.name, u.id]} %><br>
+    
+    <%= f.label :password, "Your password:" %><br>
+    <%= f.password_field :password %><br>
+
+    <%= f.submit "Sign In" %>
+<% end %>
