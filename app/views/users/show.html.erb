@@ -1,0 +1,13 @@
+<h1>User: <%= @user.name %></h1>
+<p>Mood: <%= @user.mood %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Height: <%= @user.height %></p>
+
+<% if session[:message].present? %>
+<div class='display'>
+    <p><%= session[:message] %></p>
+    <% session.delete :message %>
+</div>
+<% end %>
+
+<%= link_to "See attractions", attractions_path %>
